@@ -1,5 +1,8 @@
 fetch("images.json")
-  .then((response) => response.json())
+  .then((response) => {
+    console.log("resp", response);
+    response.json();
+  })
   .then((data) => {
     const slider = document.getElementById("imageSlider");
     data.images.forEach((image) => {
