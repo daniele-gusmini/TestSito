@@ -4,6 +4,7 @@ fetch("images.json")
     response.json();
   })
   .then((data) => {
+    console.log("data", data);
     const slider = document.getElementById("imageSlider");
     data.images.forEach((image) => {
       const img = document.createElement("img");
