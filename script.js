@@ -1,7 +1,7 @@
 fetch("images.json")
   .then((response) => {
     console.log("resp", response);
-    response.json();
+    return response.json();
   })
   .then((data) => {
     console.log("data", data);
