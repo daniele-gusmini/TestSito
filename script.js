@@ -23,5 +23,5 @@ function rotateImages() {
     images[currentImageIndex].style.display = "none";
     currentImageIndex = (currentImageIndex + 1) % max;
     images[currentImageIndex].style.display = "block";
-  }, 3000);
+  }, 5000);
 }

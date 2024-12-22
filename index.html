@@ -4,17 +4,27 @@
 <meta charset="UTF-8">
 <title>Slider Dinamico di Immagini</title>
 <style>
+  html, body {
+    height: 100%;  /* Imposta l'altezza di html e body per far sì che il div .slider possa estendersi completamente */
+    margin: 0;     /* Rimuove il margine di default */
+    display: flex; /* Utilizza flexbox per centrare il contenuto */
+    justify-content: center; /* Centra il contenuto orizzontalmente */
+    align-items: center; /* Centra il contenuto verticalmente */
+    overflow: hidden; /* Nasconde eventuali sbordamenti */
+  }
   .slider {
-    width: 100%;
-    margin: auto;
-    overflow: hidden;
+    width: 100%; /* Larghezza del div dello slider */
+    display: flex; /* Usa flexbox per centrare le immagini all'interno dello slider */
+    justify-content: center; /* Centra le immagini orizzontalmente nel slider */
+    align-items: center; /* Centra le immagini verticalmente nel slider */
   }
   .slider img {
-    width: 100%;
-    display: none;
+    max-width: 100%; /* Imposta la larghezza massima dell'immagine al 100% dello slider */
+    max-height: 100vh; /* Imposta l'altezza massima dell'immagine al 100% dell'altezza della viewport */
+    display: none; /* Inizialmente nasconde le immagini */
   }
   .slider img:first-child {
-    display: block;
+    display: block; /* Mostra la prima immagine all'avvio */
   }
 </style>
 </head>
@@ -22,5 +32,4 @@
 <div class="slider" id="imageSlider"></div>
 <script src="script.js"></script>
 </body>
-
 </html>
